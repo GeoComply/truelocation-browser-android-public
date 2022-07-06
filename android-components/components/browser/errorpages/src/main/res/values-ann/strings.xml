@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- The button that appears at the bottom of an error page. -->
+    <string name="mozac_browser_errorpages_page_refresh">Kpọk Sa</string>
+
+    <!-- The document title and heading of an error page shown when a website cannot be loaded for an unknown reason. -->
+    <string name="mozac_browser_errorpages_generic_title">Kpekọt Ìrọ Mbeek Ìsan̄a</string>
+    <!-- The error message shown when a website cannot be loaded for an unknown reason. -->
+    <string name="mozac_browser_errorpages_generic_message"><![CDATA[
+      <p>Kpunu ofifi etip òfolek ufialek mè ìre ǹlilọ yi.</p>
+    ]]></string>
+
+    <!-- The document title and heading of the error page shown when a website sends back unusual and incorrect credentials for an SSL certificate. -->
+    <string name="mozac_browser_errorpages_security_ssl_title">Ìkakọt ìtibi ìnin̄ me utelelek</string>
+    <!-- The error message shown when a website sends back unusual and incorrect credentials for an SSL certificate. -->
+    <string name="mozac_browser_errorpages_security_ssl_message"><![CDATA[
+      <ul>
+        <li>Akpọk okisa lek ijeen̄The page you are trying to view cannot be shown because the authenticity of the received data could not be verified.</li>
+        <li>Please contact the website owners to inform them of this problem.</li>
+      </ul>
+    ]]></string>
+
+    <!-- The error message shown when a website sends has an invalid or expired SSL certificate. -->
+    <string name="mozac_browser_errorpages_security_bad_cert_message"><![CDATA[
+      <ul>
+        Eyi môkọt ire ufialek mèlek onineen̄ òbeme-etip. Môkọt si ire enw okisa lek ifafiaan̄ irọ kubọk ọmọ ore achubọk òbeme-etip ya.</li>
+        <li>Ire owuulek irak itibi itet me lek òbeme-etip yi me mgbọ òraraka, ufialek yi ìbokup mgbidim mgbọ gaalek; owu môkọt igwu ikom inisa me mgbidim mgbọ.</li>
+      </ul>
+    ]]></string>
+
+    <!-- The text shown inside the advanced button used to expand the advanced options. It's only shown when a website has an invalid SSL certificate. -->
+    <string name="mozac_browser_errorpages_security_bad_cert_advanced">Òdọdọk…</string>
+
+    </resources>
