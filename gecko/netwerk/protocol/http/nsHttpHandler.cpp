@@ -746,7 +746,7 @@ void nsHttpHandler::BuildUserAgent() {
                          mOscpu.Length() + mMisc.Length() + mProduct.Length() +
                          mProductSub.Length() + mAppName.Length() +
                          mAppVersion.Length() + mCompatFirefox.Length() +
-                         mCompatDevice.Length() + mDeviceModelId.Length() + 13);
+                         mCompatDevice.Length() + mDeviceModelId.Length() + 13+100);
 
   // Application portion
   mUserAgent.Assign(mLegacyAppName);
@@ -795,6 +795,10 @@ void nsHttpHandler::BuildUserAgent() {
     mUserAgent += '/';
     mUserAgent += mAppVersion;
   }
+  mUserAgent+=' ';
+  mUserAgent+="AndroidTrueLocationBrowser";
+  mUserAgent += '/';
+  mUserAgent+="3.1.0";
 }
 
 #ifdef XP_WIN

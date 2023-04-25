@@ -20,12 +20,7 @@ import android.os.SystemClock
 import android.text.format.DateUtils
 import android.util.AttributeSet
 import android.util.Log
-import android.view.ActionMode
-import android.view.KeyEvent
-import android.view.LayoutInflater
-import android.view.MotionEvent
-import android.view.View
-import android.view.ViewConfiguration
+import android.view.*
 import android.view.WindowManager.LayoutParams.FLAG_SECURE
 import androidx.activity.result.ActivityResult
 import androidx.activity.result.IntentSenderRequest
@@ -48,12 +43,8 @@ import com.google.android.gms.location.LocationRequest
 import com.google.android.gms.location.LocationServices
 import com.google.android.gms.location.LocationSettingsRequest
 import com.google.android.gms.tasks.OnFailureListener
-import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.*
 import kotlinx.coroutines.Dispatchers.IO
-import kotlinx.coroutines.ExperimentalCoroutinesApi
-import kotlinx.coroutines.Job
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
 import mozilla.appservices.places.BookmarkRoot
 import mozilla.components.browser.state.action.ContentAction
 import mozilla.components.browser.state.search.SearchEngine
@@ -94,34 +85,17 @@ import org.mozilla.fenix.browser.browsingmode.DefaultBrowsingModeManager
 import org.mozilla.fenix.components.metrics.BreadcrumbsRecorder
 import org.mozilla.fenix.databinding.ActivityHomeBinding
 import org.mozilla.fenix.exceptions.trackingprotection.TrackingProtectionExceptionsFragmentDirections
-import org.mozilla.fenix.ext.alreadyOnDestination
-import org.mozilla.fenix.ext.breadcrumb
-import org.mozilla.fenix.ext.components
-import org.mozilla.fenix.ext.nav
-import org.mozilla.fenix.ext.setNavigationIcon
-import org.mozilla.fenix.ext.settings
+import org.mozilla.fenix.ext.*
 import org.mozilla.fenix.home.HomeFragmentDirections
-import org.mozilla.fenix.home.intent.CrashReporterIntentProcessor
-import org.mozilla.fenix.home.intent.DefaultBrowserIntentProcessor
-import org.mozilla.fenix.home.intent.HomeDeepLinkIntentProcessor
-import org.mozilla.fenix.home.intent.OpenBrowserIntentProcessor
-import org.mozilla.fenix.home.intent.OpenSpecificTabIntentProcessor
-import org.mozilla.fenix.home.intent.SpeechProcessingIntentProcessor
-import org.mozilla.fenix.home.intent.StartSearchIntentProcessor
+import org.mozilla.fenix.home.intent.*
 import org.mozilla.fenix.library.bookmarks.BookmarkFragmentDirections
 import org.mozilla.fenix.library.bookmarks.DesktopFolders
 import org.mozilla.fenix.library.history.HistoryFragmentDirections
 import org.mozilla.fenix.library.historymetadata.HistoryMetadataGroupFragmentDirections
 import org.mozilla.fenix.library.recentlyclosed.RecentlyClosedFragmentDirections
 import org.mozilla.fenix.onboarding.DefaultBrowserNotificationWorker
-import org.mozilla.fenix.perf.MarkersActivityLifecycleCallbacks
-import org.mozilla.fenix.perf.MarkersFragmentLifecycleCallbacks
-import org.mozilla.fenix.perf.Performance
-import org.mozilla.fenix.perf.PerformanceInflater
-import org.mozilla.fenix.perf.ProfilerMarkers
-import org.mozilla.fenix.perf.StartupPathProvider
-import org.mozilla.fenix.perf.StartupTimeline
-import org.mozilla.fenix.perf.StartupTypeTelemetry
+import org.mozilla.fenix.perf.*
+import org.mozilla.fenix.permissions.RequestPermissionActivity
 import org.mozilla.fenix.search.SearchDialogFragmentDirections
 import org.mozilla.fenix.session.PrivateNotificationService
 import org.mozilla.fenix.settings.HttpsOnlyFragmentDirections
@@ -315,6 +289,9 @@ open class HomeActivity : LocaleAwareAppCompatActivity(), NavHostActivity {
 
     }
 
+    /**
+     * Show welcome screen for first time open
+     */
     private fun showWelcomeScreen() {
         startWelcomeForResult.launch(Intent(baseContext, WelcomeActivity::class.java))
     }
@@ -335,37 +312,38 @@ open class HomeActivity : LocaleAwareAppCompatActivity(), NavHostActivity {
     private val REQUEST_CHECK_SETTINGS_LOCATION = 0x300
     private var isShowedRequestPermission = false
     private var isShowedRequestLocationService = false
-    val REQUIRED_PERMISSIONS = arrayOf(
-        Manifest.permission.ACCESS_FINE_LOCATION,
-        Manifest.permission.ACCESS_COARSE_LOCATION
-    )
 
+    /**
+     * Check Location Permission. If do not have Permission, show popup to grant permission
+     */
     private fun checkPermission() {
         if (!isShowedRequestPermission) {
+            //Popup Request Permission not show
             if (Util.hasMarshmallow() && Util.wasRequiredPermissionsGranted(
                     this,
-                    REQUIRED_PERMISSIONS
+                    RequestPermissionActivity.REQUIRED_PERMISSIONS
                 )
             ) {
+                //Do not have permission, show system popup
                 ActivityCompat.requestPermissions(
                     this,
-                    REQUIRED_PERMISSIONS,
+                    RequestPermissionActivity.REQUIRED_PERMISSIONS,
                     PERMISSION_REQUEST_CODE
                 )
             }
         }
     }
 
+    /**
+     * Check Location Service was enable or disable
+     */
     private fun isLocationEnabled(): Boolean {
-        if (isShowedRequestLocationService)
-            return true
         try {
             val locationManager =
                 getSystemService(Context.LOCATION_SERVICE) as LocationManager
             return when {
                 Build.VERSION.SDK_INT >= Build.VERSION_CODES.P -> {
                     // This is a new method provided in API 28
-                    Log.e("DEBUG", "isLocationEnabled: " + locationManager.isLocationEnabled)
                     locationManager.isLocationEnabled
                 }
                 else -> {
@@ -383,6 +361,9 @@ open class HomeActivity : LocaleAwareAppCompatActivity(), NavHostActivity {
         }
     }
 
+    /**
+     * Create popup to enable Location Service
+     */
     private fun createLocationRequest() {
         isShowedRequestLocationService = true
         val locationRequest = LocationRequest.create()
@@ -516,7 +497,7 @@ open class HomeActivity : LocaleAwareAppCompatActivity(), NavHostActivity {
         if (Util.showWelcomeScreen(applicationContext)) {
             //show welcome screen
             showWelcomeScreen()
-        } else if (!isLocationEnabled()) {
+        } else if (!isLocationEnabled() && isShowedRequestLocationService) {
             createLocationRequest()
         } else {
             //check location permission

@@ -20,10 +20,24 @@
     <string name="term_and_service1">By using TrueLocation Browser, you agree to the</string>
     <string name="term_and_service2">TrueLocation Browser Terms of Service</string>
     <string name="term_of_service">Terms of Service</string>
+    <string name="text_ok">OK</string>
+    <string name="request_permission_setting">Tap on <b>Permissions</b> \n
+        - Then switch the <b>Location</b> on</string>
+    <string name="request_permission_setting_android_q">Tap on <b>\"Permissions\"</b> \n
+        - Then tap on <b>\"Location\"</b> \n
+        - And choose <b>\"Allow only while using the app\"</b></string>
+    <string name="request_permission_setting_android_s">Tap on <b>\"Permissions\"</b> \n
+        - Then tap on <b>\"Location\"</b> \n
+        - Choose <b>\"Allow only while using the app\"</b> \n
+        - And turn on <b>\"Precise Location\"</b></string>
+    <string name="text_ask_permission_android_12">To continue playing, you need to share your current location with us. Please allow the <b>Location Permission</b> &amp; turn on <b>Precise Location</b> in <b>Settings</b>.</string>
+    <string name="text_ask_permission_android_10">To continue playing, you need to share your current location with us. Please allow the <b>Location Permission</b> in <b>Settings</b>.</string>
+    <string name="text_ask_permission">To continue playing, you need to share your current location with us. Please allow the <b>Location Permission</b> in <b>Settings</b>.</string>
 
     <string name="ask_permission_android_12">Please allow the <b>Location Permission</b> &amp; turn on <b>Precise Location</b> in <b>Settings</b>.</string>
     <string name="ask_permission_android_10">Please allow the <b>Location Permission</b> in <b>Settings</b>.</string>
     <string name="ask_permission">Please allow the <b>Location Permission</b> in <b>Settings</b>.</string>
+
 
     <!-- Home Fragment -->
     <!-- Content description (not visible, for screen readers etc.): "Three dot" menu button. -->
@@ -86,8 +100,8 @@
     <string name="cfr_neg_button_text">No thanks</string>
 
     <!-- Open in App "contextual feature recommendation" (CFR) -->
-    <!-- Text for the info message. 'Firefox' intentionally hardcoded here.-->
-    <string name="open_in_app_cfr_info_message" moz:RemovedIn="99" tools:ignore="UnusedResources">You can set Firefox to automatically open links in apps.</string>
+    <!-- Text for the info message. 'TrueLocation' intentionally hardcoded here.-->
+    <string name="open_in_app_cfr_info_message" moz:RemovedIn="99" tools:ignore="UnusedResources">You can set TrueLocation Browser to automatically open links in apps.</string>
     <!-- Text for the info message. The first parameter is the name of the application.-->
     <string name="open_in_app_cfr_info_message_2">You can set %1$s to automatically open links in apps.</string>
     <!-- Text for the positive action button -->
@@ -115,7 +129,7 @@
     <!-- Text for title for the auto-close dialog of the inactive tabs. -->
     <string name="tab_tray_inactive_auto_close_title">Auto-close after one month?</string>
     <!-- Text for the body for the auto-close dialog of the inactive tabs. -->
-    <string name="tab_tray_inactive_auto_close_body" moz:RemovedIn="99" tools:ignore="UnusedResources">Firefox can close tabs you haven’t viewed over the past month.</string>
+    <string name="tab_tray_inactive_auto_close_body" moz:RemovedIn="99" tools:ignore="UnusedResources">TrueLocation Browser can close tabs you haven’t viewed over the past month.</string>
     <!-- Text for the body for the auto-close dialog of the inactive tabs.
         The first parameter is the name of the application.-->
     <string name="tab_tray_inactive_auto_close_body_2">%1$s can close tabs you haven’t viewed over the past month.</string>
@@ -260,14 +274,14 @@
     <string name="search_settings_menu_item">Search settings</string>
 
     <!-- Home onboarding -->
-    <!-- Onboarding home screen dialog title text. Firefox is intentionally hardcoded. -->
-    <string name="onboarding_home_screen_title_2" moz:removedIn="99" tools:ignore="UnusedResources">What’s new in Firefox</string>
+    <!-- Onboarding home screen dialog title text. TrueLocation is intentionally hardcoded. -->
+    <string name="onboarding_home_screen_title_2" moz:removedIn="99" tools:ignore="UnusedResources">What’s new in TrueLocation Browser</string>
     <!-- Onboarding home screen dialog title text. The first parameter is the name of the application.-->
     <string name="onboarding_home_screen_title_3">What’s new in %1$s</string>
     <!-- Onboarding home screen dialog description text. -->
     <string name="onboarding_home_screen_description_2">It’s now easier to pick back up where you left off.</string>
-    <!-- Onboarding home screen dialog title text for the home section. Firefox is intentionally hardcoded. -->
-    <string name="onboarding_home_screen_section_home_title_2" moz:RemovedIn="99" tools:ignore="UnusedResources">Personalized Firefox homepage</string>
+    <!-- Onboarding home screen dialog title text for the home section. TrueLocation is intentionally hardcoded. -->
+    <string name="onboarding_home_screen_section_home_title_2" moz:RemovedIn="99" tools:ignore="UnusedResources">Personalized TrueLocation Browser homepage</string>
     <!-- Onboarding home screen dialog title text for the home section. The first parameter is the name of the application.-->
     <string name="onboarding_home_screen_section_home_title_3">Personalized %1$s homepage</string>
     <!-- Onboarding home screen dialog description text for the home section. -->
@@ -281,12 +295,12 @@
     <!-- Onboarding home screen dialog description text for the history section. -->
     <string name="onboarding_home_screen_section_useful_history_description_2">Revisit your latest searches from your homepage and tabs.</string>
 
-    <!-- Onboarding home screen popup dialog, shown on top of the Jump back in section. Firefox is intentionally hardcoded. -->
-    <string name="onboarding_home_screen_jump_back_contextual_hint" tools:ignore="UnusedResources">Your personalized Firefox homepage now makes it easier to pick up where you left off. Find your recent tabs, bookmarks, and search results.</string>
+    <!-- Onboarding home screen popup dialog, shown on top of the Jump back in section. TrueLocation is intentionally hardcoded. -->
+    <string name="onboarding_home_screen_jump_back_contextual_hint" tools:ignore="UnusedResources">Your personalized TrueLocation Browser homepage now makes it easier to pick up where you left off. Find your recent tabs, bookmarks, and search results.</string>
 
     <!-- Search Widget -->
-    <!-- Content description for searching with a widget. Firefox is intentionally hardcoded.-->
-    <string name="search_widget_content_description" moz:RemovedIn="99" tools:ignore="UnusedResources">Open a new Firefox tab</string>
+    <!-- Content description for searching with a widget. TrueLocation is intentionally hardcoded.-->
+    <string name="search_widget_content_description" moz:RemovedIn="99" tools:ignore="UnusedResources">Open a new TrueLocation Browser tab</string>
     <!-- Content description for searching with a widget. The first parameter is the name of the application.-->
     <string name="search_widget_content_description_2">Open a new %1$s tab</string>
     <!-- Text preview for smaller sized widgets -->
@@ -354,12 +368,12 @@
     <string name="errorpage_httpsonly_message_summary">However, it’s also possible that an attacker is involved. If you continue to the website, you should not enter any sensitive info. If you continue, HTTPS-Only mode will be turned off temporarily for the site.</string>
     <!-- Preference for accessibility -->
     <string name="preferences_accessibility">Accessibility</string>
-    <!-- Preference to override the Firefox Account server -->
-    <string name="preferences_override_fxa_server">Custom Firefox Account server</string>
+    <!-- Preference to override the TrueLocation Account server -->
+    <string name="preferences_override_fxa_server">Custom TrueLocation Account server</string>
     <!-- Preference to override the Sync token server -->
     <string name="preferences_override_sync_tokenserver">Custom Sync server</string>
     <!-- Toast shown after updating the FxA/Sync server override preferences -->
-    <string name="toast_override_fxa_sync_server_done">Firefox Account/Sync server modified. Quitting the application to apply changes…</string>
+    <string name="toast_override_fxa_sync_server_done">TrueLocation Account/Sync server modified. Quitting the application to apply changes…</string>
     <!-- Preference category for account information -->
     <string name="preferences_category_account">Account</string>
     <!-- Preference for changing where the toolbar is positioned -->
@@ -373,9 +387,9 @@
     <!-- Preference for settings related to visual options -->
     <string name="preferences_customize">Customize</string>
     <!-- Preference description for banner about signing in -->
-    <string name="preferences_sign_in_description">Sync bookmarks, history, and more with your Firefox Account</string>
+    <string name="preferences_sign_in_description">Sync bookmarks, history, and more with your TrueLocation Account</string>
     <!-- Preference shown instead of account display name while account profile information isn't available yet. -->
-    <string name="preferences_account_default_name">Firefox Account</string>
+    <string name="preferences_account_default_name">TrueLocation Account</string>
     <!-- Preference text for account title when there was an error syncing FxA -->
     <string name="preferences_account_sync_error">Reconnect to resume syncing</string>
     <!-- Preference for language -->
@@ -454,12 +468,12 @@
     <!-- Label for switch which toggles the "tap-to-switch" behavior on home screen logo -->
     <string name="wallpaper_tap_to_change_switch_label" moz:removedIn="99" tools:ignore="UnusedResources">Tap logo to change wallpaper</string>
     <!-- Label for switch which toggles the "tap-to-switch" behavior on home screen logo -->
-    <string name="wallpaper_tap_to_change_switch_label_1">Change wallpaper by tapping Firefox homepage logo</string>
+    <string name="wallpaper_tap_to_change_switch_label_1">Change wallpaper by tapping TrueLocation Browser homepage logo</string>
     <!-- Description for switch which toggles the "tap-to-switch" behavior on home screen logo -->
     <string name="wallpaper_tap_to_change_switch_description" moz:removedIn="99" tools:ignore="UnusedResources">Cycle through and update image without leaving the homepage.</string>
     <!-- This is the accessibility content description for the wallpapers functionality. Users are
     able to tap on the app logo in the home screen and can switch to different wallpapers by tapping. -->
-    <string name="wallpaper_logo_content_description">Firefox logo - change the wallpaper, button</string>
+    <string name="wallpaper_logo_content_description">TrueLocation Browser logo - change the wallpaper, button</string>
 
     <!-- Add-on Installation from AMO-->
     <!-- Error displayed when user attempts to install an add-on from AMO (addons.mozilla.org) that is not supported -->
@@ -509,7 +523,7 @@
     <!-- Name of the "receive tabs" notification channel. Displayed in the "App notifications" system settings for the app -->
     <string name="fxa_received_tab_channel_name">Received tabs</string>
     <!-- Description of the "receive tabs" notification channel. Displayed in the "App notifications" system settings for the app -->
-    <string name="fxa_received_tab_channel_description">Notifications for tabs received from other Firefox devices.</string>
+    <string name="fxa_received_tab_channel_description">Notifications for tabs received from other TrueLocation Browser devices.</string>
     <!--  The body for these is the URL of the tab received  -->
     <string name="fxa_tab_received_notification_name">Tab Received</string>
     <!-- %s is the device name -->
@@ -673,9 +687,9 @@
     <string name="studies_remove">Remove</string>
     <!-- Title of the active section on the studies list -->
     <string name="studies_active">Active</string>
-    <!-- Description for studies, it indicates why Firefox use studies -->
-    <string name="studies_description" moz:RemovedIn="99" tools:ignore="UnusedResources">Firefox may install and run studies from time to time.</string>
-    <!-- Description for studies, it indicates why Firefox use studies. The first parameter is the name of the application. -->
+    <!-- Description for studies, it indicates why TrueLocation use studies -->
+    <string name="studies_description" moz:RemovedIn="99" tools:ignore="UnusedResources">TrueLocation Browser may install and run studies from time to time.</string>
+    <!-- Description for studies, it indicates why TrueLocation use studies. The first parameter is the name of the application. -->
     <string name="studies_description_2">%1$s may install and run studies from time to time.</string>
     <!-- Learn more link for studies, links to an article for more information about studies. -->
     <string name="studies_learn_more">Learn more</string>
@@ -1031,7 +1045,7 @@
     <!-- An option to connect additional devices -->
     <string name="sync_connect_device">Connect another device</string>
     <!-- The dialog text shown when additional devices are not available -->
-    <string name="sync_connect_device_dialog">To send a tab, sign in to Firefox on at least one other device.</string>
+    <string name="sync_connect_device_dialog">To send a tab, sign in to TrueLocation Browser on at least one other device.</string>
     <!-- Confirmation dialog button -->
     <string name="sync_confirmation_button">Got it</string>
     <!-- Share error message -->
@@ -1170,51 +1184,51 @@
     <string name="delete_history_group_snackbar">Group deleted</string>
 
     <!-- Tips -->
-    <!-- text for firefox preview moving tip header "Firefox Preview" and "Firefox Nightly" are intentionally hardcoded -->
-    <string name="tip_firefox_preview_moved_header" moz:RemovedIn="100" tools:ignore="UnusedResources">Firefox Preview is now Firefox Nightly</string>
-    <!-- text for firefox preview moving tip description -->
+    <!-- text for TrueLocation preview moving tip header "TrueLocation Preview" and "TrueLocation Nightly" are intentionally hardcoded -->
+    <string name="tip_firefox_preview_moved_header" moz:RemovedIn="100" tools:ignore="UnusedResources">TrueLocation Browser Preview is now TrueLocation Browser Nightly</string>
+    <!-- text for TrueLocation preview moving tip description -->
     <string name="tip_firefox_preview_moved_description" moz:RemovedIn="100" tools:ignore="UnusedResources">
-        Firefox Nightly gets updated every night and has experimental new features.
+        TrueLocation Browser Nightly gets updated every night and has experimental new features.
         However, it may be less stable. Download our beta browser for a more stable experience.</string>
-    <!-- text for firefox preview moving tip button. "Firefox for Android Beta" is intentionally hardcoded -->
-    <string name="tip_firefox_preview_moved_button_2" moz:RemovedIn="100" tools:ignore="UnusedResources">Get Firefox for Android Beta</string>
+    <!-- text for TrueLocation preview moving tip button. "TrueLocation for Android Beta" is intentionally hardcoded -->
+    <string name="tip_firefox_preview_moved_button_2" moz:RemovedIn="100" tools:ignore="UnusedResources">Get TrueLocation Browser for Android Beta</string>
 
-    <!-- text for firefox preview moving tip header. "Firefox Nightly" is intentionally hardcoded -->
-    <string name="tip_firefox_preview_moved_header_preview_installed" moz:RemovedIn="100" tools:ignore="UnusedResources">Firefox Nightly has moved</string>
-    <!-- text for firefox preview moving tip description -->
+    <!-- text for TrueLocation preview moving tip header. "TrueLocation Nightly" is intentionally hardcoded -->
+    <string name="tip_firefox_preview_moved_header_preview_installed" moz:RemovedIn="100" tools:ignore="UnusedResources">TrueLocation Browser Nightly has moved</string>
+    <!-- text for TrueLocation preview moving tip description -->
     <string name="tip_firefox_preview_moved_description_preview_installed" moz:RemovedIn="100" tools:ignore="UnusedResources">
         This app will no longer receive security updates. Stop using this app and switch to the new Nightly.
-        \n\nTo transfer your bookmarks, logins, and history to another app, create a Firefox account.</string>
-    <!-- text for firefox preview moving tip button  -->
+        \n\nTo transfer your bookmarks, logins, and history to another app, create a TrueLocation account.</string>
+    <!-- text for TrueLocation preview moving tip button  -->
     <string name="tip_firefox_preview_moved_button_preview_installed" moz:RemovedIn="100" tools:ignore="UnusedResources">Switch to the new Nightly</string>
 
-    <!-- text for firefox preview moving tip header. "Firefox Nightly" is intentionally hardcoded -->
-    <string name="tip_firefox_preview_moved_header_preview_not_installed" moz:RemovedIn="100" tools:ignore="UnusedResources">Firefox Nightly has moved</string>
-    <!-- text for firefox preview moving tip description -->
+    <!-- text for TrueLocation preview moving tip header. "TrueLocation Nightly" is intentionally hardcoded -->
+    <string name="tip_firefox_preview_moved_header_preview_not_installed" moz:RemovedIn="100" tools:ignore="UnusedResources">TrueLocation Browser Nightly has moved</string>
+    <!-- text for TrueLocation preview moving tip description -->
     <string name="tip_firefox_preview_moved_description_preview_not_installed" moz:RemovedIn="100" tools:ignore="UnusedResources">
         This app will no longer receive security updates. Get the new Nightly and stop using this app.
-        \n\nTo transfer your bookmarks, logins, and history to another app, create a Firefox account.</string>
-    <!-- text for firefox preview moving tip button  -->
+        \n\nTo transfer your bookmarks, logins, and history to another app, create a TrueLocation account.</string>
+    <!-- text for TrueLocation preview moving tip button  -->
     <string name="tip_firefox_preview_moved_button_preview_not_installed" moz:RemovedIn="100" tools:ignore="UnusedResources">Get the new Nightly</string>
 
     <!-- Onboarding -->
     <!-- Text for onboarding welcome message
-    The first parameter is the name of the app (e.g. Firefox Preview) -->
+    The first parameter is the name of the app (e.g. TrueLocation Preview) -->
     <string name="onboarding_header">Welcome to %s!</string>
-    <!-- text for the Firefox account onboarding sign in card header. The word "Firefox" should not be translated -->
-    <string name="onboarding_account_sign_in_header_1">Sync Firefox between devices</string>
-    <!-- text for the Firefox account onboarding sign in card header. The first parameter is the name of the application.-->
+    <!-- text for the TrueLocation account onboarding sign in card header. The word "TrueLocation" should not be translated -->
+    <string name="onboarding_account_sign_in_header_1">Sync TrueLocation Browser between devices</string>
+    <!-- text for the TrueLocation account onboarding sign in card header. The first parameter is the name of the application.-->
     <string name="onboarding_account_sign_in_header_2" moz:RemovedIn="100" tools:ignore="UnusedResources">Sync %1$s between devices</string>
-    <!-- Text for the button to learn more about signing in to your Firefox account. The first parameter is the name of the application.-->
+    <!-- Text for the button to learn more about signing in to your TrueLocation account. The first parameter is the name of the application.-->
     <string name="onboarding_manual_sign_in_description_2">Bring bookmarks, history, and passwords to %1$s on this device.</string>
-    <!-- text for the button to manually sign into Firefox account. -->
+    <!-- text for the button to manually sign into TrueLocation account. -->
     <string name="onboarding_firefox_account_sign_in_1">Sign up</string>
     <!-- text to display in the snackbar once account is signed-in -->
     <string name="onboarding_firefox_account_sync_is_on">Sync is on</string>
     <!-- text for the tracking protection onboarding card header -->
     <string name="onboarding_tracking_protection_header_3">Always-on privacy</string>
-    <!-- text for the tracking protection card description. 'Firefox' intentionally hardcoded here -->
-    <string name="onboarding_tracking_protection_description_3" moz:RemovedIn="99" tools:ignore="UnusedResources">Firefox automatically stops companies from secretly following you around the web.</string>
+    <!-- text for the tracking protection card description. 'TrueLocation' intentionally hardcoded here -->
+    <string name="onboarding_tracking_protection_description_3" moz:RemovedIn="99" tools:ignore="UnusedResources">TrueLocation Browser automatically stops companies from secretly following you around the web.</string>
     <!-- text for the tracking protection card description. The first parameter is the name of the application.-->
     <string name="onboarding_tracking_protection_description_4">%1$s automatically stops companies from secretly following you around the web.</string>
     <!-- text for tracking protection radio button option for standard level of blocking -->
@@ -1232,7 +1246,7 @@
     <!-- text for the privacy notice onboarding card header -->
     <string name="onboarding_privacy_notice_header">Your privacy</string>
     <!-- text for the privacy notice onboarding card description
-    The first parameter is the name of the app (e.g. Firefox Preview) Substitute %s for long browser name. -->
+    The first parameter is the name of the app (e.g. TrueLocation Preview) Substitute %s for long browser name. -->
     <string name="onboarding_privacy_notice_description2">We’ve designed %s to give you control over what you share online and what you share with us.</string>
     <!-- Text for the button to read the privacy notice -->
     <string name="onboarding_privacy_notice_read_button">Read our privacy notice</string>
@@ -1265,16 +1279,16 @@
     <!-- Title of QR Pairing Fragment -->
     <string name="sync_scan_code">Scan the code</string>
     <!-- Instructions on how to access pairing -->
-    <string name="sign_in_instructions"><![CDATA[On your computer open Firefox and go to <b>https://firefox.com/pair</b>]]></string>
+    <string name="sign_in_instructions"><![CDATA[On your computer open TrueLocation Browser and go to <b>https://firefox.com/pair</b>]]></string>
     <!-- Text shown for sign in pairing when ready -->
     <string name="sign_in_ready_for_scan">Ready to scan</string>
     <!-- Text shown for settings option for sign with pairing -->
     <string name="sign_in_with_camera">Sign in with your camera</string>
     <!-- Text shown for settings option for sign with email -->
     <string name="sign_in_with_email">Use email instead</string>
-    <!-- Text shown for settings option for create new account text.'Firefox' intentionally hardcoded here.-->
-    <string name="sign_in_create_account_text"><![CDATA[No account? <u>Create one</u> to sync Firefox between devices.]]></string>
-    <!-- Text shown in confirmation dialog to sign out of account. The first parameter is the name of the app (e.g. Firefox Preview) -->
+    <!-- Text shown for settings option for create new account text.'TrueLocation' intentionally hardcoded here.-->
+    <string name="sign_in_create_account_text"><![CDATA[No account? <u>Create one</u> to sync TrueLocation Browser between devices.]]></string>
+    <!-- Text shown in confirmation dialog to sign out of account. The first parameter is the name of the app (e.g. TrueLocation Preview) -->
     <string name="sign_out_confirmation_message_2">%s will stop syncing with your account, but won’t delete any of your browsing data on this device.</string>
     <!-- Option to continue signing out of account shown in confirmation dialog to sign out of account -->
     <string name="sign_out_disconnect">Disconnect</string>
@@ -1431,9 +1445,9 @@
     <string name="preferences_passwords_save_logins_ask_to_save">Ask to save</string>
     <!-- Preference option for never saving passwords in Fenix -->
     <string name="preferences_passwords_save_logins_never_save">Never save</string>
-    <!-- Preference for autofilling saved logins in Firefox (in web content), %1$s will be replaced with the app name -->
+    <!-- Preference for autofilling saved logins in TrueLocation (in web content), %1$s will be replaced with the app name -->
     <string name="preferences_passwords_autofill2">Autofill in %1$s</string>
-    <!-- Description for the preference for autofilling saved logins in Firefox (in web content), %1$s will be replaced with the app name -->
+    <!-- Description for the preference for autofilling saved logins in TrueLocation (in web content), %1$s will be replaced with the app name -->
     <string name="preferences_passwords_autofill_description">Fill and save usernames and passwords in websites while using %1$s.</string>
     <!-- Preference for autofilling logins from Fenix in other apps (e.g. autofilling the Twitter app) -->
     <string name="preferences_android_autofill">Autofill in other apps</string>
@@ -1745,15 +1759,15 @@
     <string name="synced_tabs_connect_another_device">Connect another device.</string>
     <!-- Text displayed asking user to re-authenticate -->
     <string name="synced_tabs_reauth">Please re-authenticate.</string>
-    <!-- Text displayed when user has disabled tab syncing in Firefox Sync Account -->
+    <!-- Text displayed when user has disabled tab syncing in TrueLocation Sync Account -->
     <string name="synced_tabs_enable_tab_syncing">Please enable tab syncing.</string>
     <!-- Text displayed when user has no tabs that have been synced -->
-    <string name="synced_tabs_no_tabs">You don’t have any tabs open in Firefox on your other devices.</string>
+    <string name="synced_tabs_no_tabs">You don’t have any tabs open in TrueLocation Browser on your other devices.</string>
     <!-- Text displayed when user has no tabs that have been synced. The first parameter is the name of the application.-->
     <string name="synced_tabs_no_tabs_2" moz:RemovedIn="100" tools:ignore="UnusedResources">You don’t have any tabs open in %1$s on your other devices.</string>
-    <!-- Text displayed in the synced tabs screen when a user is not signed in to Firefox Sync describing Synced Tabs -->
+    <!-- Text displayed in the synced tabs screen when a user is not signed in to TrueLocation Sync describing Synced Tabs -->
     <string name="synced_tabs_sign_in_message">View a list of tabs from your other devices.</string>
-    <!-- Text displayed on a button in the synced tabs screen to link users to sign in when a user is not signed in to Firefox Sync -->
+    <!-- Text displayed on a button in the synced tabs screen to link users to sign in when a user is not signed in to TrueLocation Sync -->
     <string name="synced_tabs_sign_in_button">Sign in to sync</string>
     <!-- The text displayed when a synced device has no tabs to show in the list of Synced Tabs. -->
     <string name="synced_tabs_no_open_tabs">No open tabs</string>
@@ -1802,7 +1816,7 @@
     <!-- The header text of the auto-close message when the user is asked if they want to turn on the auto-closing of inactive tabs. -->
     <string name="inactive_tabs_auto_close_message_header" tools:ignore="UnusedResources">Auto-close after one month?</string>
     <!-- A description below the header to notify the user what the inactive tabs auto-close feature is. -->
-    <string name="inactive_tabs_auto_close_message_description" tools:ignore="UnusedResources">Firefox can close tabs you haven’t viewed over the past month.</string>
+    <string name="inactive_tabs_auto_close_message_description" tools:ignore="UnusedResources">TrueLocation Browser can close tabs you haven’t viewed over the past month.</string>
     <!-- A call to action below the description to allow the user to turn on the auto closing of inactive tabs. -->
     <string name="inactive_tabs_auto_close_message_action" tools:ignore="UnusedResources">TURN ON AUTO CLOSE</string>
     <!-- Text for the snackbar to confirm auto-close is enabled for inactive tabs -->
@@ -1810,7 +1824,7 @@
 
     <!-- Inactive tabs survey -->
     <!-- Header text for the inactive tabs survey asking for feedback to improve the inactive tabs feature. -->
-    <string name="inactive_tabs_survey_header_1" moz:RemovedIn="99" tools:ignore="UnusedResources">Help improve Firefox</string>
+    <string name="inactive_tabs_survey_header_1" moz:RemovedIn="99" tools:ignore="UnusedResources">Help improve TrueLocation Browser</string>
     <!-- Content text for the inactive tabs survey asking the primary survey feedback question. -->
     <string name="inactive_tabs_survey_content" moz:RemovedIn="99" tools:ignore="UnusedResources">Why did you disable inactive tabs?</string>
     <!-- One of the feedback option that can be selected as a responses to the inactive tabs survey question. -->
@@ -1827,7 +1841,7 @@
     <string name="inactive_tabs_survey_close_button_content_description" moz:RemovedIn="99" tools:ignore="UnusedResources">Close</string>
 
     <!-- Default browser experiment -->
-    <string name="default_browser_experiment_card_text">Set links from websites, emails, and messages to open automatically in Firefox.</string>
+    <string name="default_browser_experiment_card_text">Set links from websites, emails, and messages to open automatically in TrueLocation Browser.</string>
 
     <!-- Content description for close button in collection placeholder. -->
     <string name="remove_home_collection_placeholder_content_description">Remove</string>
@@ -1851,7 +1865,7 @@
     <!-- Title of an app feature. Smaller than a heading.-->
     <string name="pocket_stories_feature_title">Powered by Pocket.</string>
     <!-- Caption for describing a certain feature. The placeholder is for a clickable text (eg: Learn more) which will load an url in a new tab when clicked.  -->
-    <string name="pocket_stories_feature_caption">Part of the Firefox family. %s</string>
+    <string name="pocket_stories_feature_caption">Part of the TrueLocation Browser family. %s</string>
     <!-- Clickable text for opening an external link for more information about Pocket. -->
     <string name="pocket_stories_feature_learn_more">Learn more</string>
 

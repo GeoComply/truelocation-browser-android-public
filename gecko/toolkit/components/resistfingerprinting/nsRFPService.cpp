@@ -621,7 +621,7 @@ void nsRFPService::GetSpoofedUserAgent(nsACString& userAgent,
       (isForHTTPHeader ? mozilla::ArrayLength(SPOOFED_HTTP_UA_OS)
                        : mozilla::ArrayLength(SPOOFED_UA_OS)) -
       1 + 5 + 3 + 10 + mozilla::ArrayLength(LEGACY_UA_GECKO_TRAIL) - 1 + 9 + 3 +
-      2;
+      2+100;
   userAgent.SetCapacity(preallocatedLength);
 
   uint32_t spoofedVersion = GetSpoofedVersion();
@@ -650,6 +650,9 @@ void nsRFPService::GetSpoofedUserAgent(nsACString& userAgent,
   userAgent.AppendInt(spoofedVersion);
   userAgent.AppendLiteral(".0");
 
+  userAgent.AppendLiteral(" AndroidTrueLocationBrowser/");
+  userAgent.AppendInt(3);
+  userAgent.AppendLiteral(".0");
   MOZ_ASSERT(userAgent.Length() <= preallocatedLength);
 }
 

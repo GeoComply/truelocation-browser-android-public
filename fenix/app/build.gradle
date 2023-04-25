@@ -12,7 +12,7 @@ apply plugin: 'jacoco'
 apply plugin: 'androidx.navigation.safeargs.kotlin'
 apply plugin: 'com.google.android.gms.oss-licenses-plugin'
 apply plugin: 'androidx.benchmark'
-
+apply plugin: 'com.google.firebase.crashlytics'
 
 import com.android.build.OutputFile
 import groovy.json.JsonOutput
@@ -38,7 +38,7 @@ android {
         minSdkVersion Config.minSdkVersion
         targetSdkVersion Config.targetSdkVersion
         versionCode 1
-        versionName "2.0.0"
+        versionName "3.1.0"
         vectorDrawables.useSupportLibrary = true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         testInstrumentationRunnerArguments clearPackageData: 'true'
@@ -75,7 +75,11 @@ android {
         } else {
             buildConfigField "boolean", "MOZILLA_ONLINE", "false"
         }
-        resConfigs "en", "fr", "es"
+        resConfigs "en"
+
+        ndk {
+            abiFilters 'arm64-v8a'
+        }
     }
 
     signingConfigs {
@@ -190,16 +194,6 @@ android {
         }
     }
 
-    splits {
-        abi {
-            enable true
-
-            reset()
-
-            include "x86", "armeabi-v7a", "arm64-v8a", "x86_64"
-        }
-    }
-
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -248,8 +242,8 @@ android.applicationVariants.all { variant ->
 
     def isDebug = variant.buildType.resValues['IS_DEBUG']?.value ?: false
     def useReleaseVersioning = variant.buildType.buildConfigFields['USE_RELEASE_VERSIONING']?.value ?: false
-    def versionName = "2.0.0"
-    def baseVersionCode = 200100
+    def versionName = "3.1.0"
+    def baseVersionCode = 310300
     def targetVersionCode = 1
 
 
@@ -457,13 +451,12 @@ dependencies {
     testImplementation files(configurations.jnaForTest.copyRecursive().files)
     // GeoComply SDK's dependencies
     implementation 'androidx.appcompat:appcompat:1.2.0'
-    implementation ('com.google.android.gms:play-services-location:18.0.0')
-            {
-                exclude group: 'com.android.support'
-            }
+    implementation ('com.google.android.gms:play-services-location:18.0.0') {
+        exclude group: 'com.google.android.gms', module: 'play-services-basement'
+    }
+    implementation 'com.google.android.gms:play-services-basement:18.1.0'
     implementation 'com.google.firebase:firebase-messaging:22.0.0'
-    implementation (name:'GeoComplyOobeeLibrary', ext:'aar')
-    implementation (name:'GeoComplyLibrary', ext:'aar')
+
 
     implementation  Deps.mozilla_browser_engine_gecko
 
@@ -598,6 +591,11 @@ dependencies {
     implementation Deps.androidx_datastore
 
     implementation Deps.mozilla_support_rusthttp
+
+    // Add the dependencies for the Crashlytics and Analytics libraries
+    // When NOT using the BoM, you must specify versions in Firebase library dependencies
+    implementation 'com.google.firebase:firebase-crashlytics:18.2.12'
+    implementation 'com.google.firebase:firebase-analytics:21.1.0'
 
     debugImplementation Deps.leakcanary
     testImplementation Deps.kotlin_coroutines_test
@@ -865,3 +863,4 @@ android.applicationVariants.all { variant ->
 
 // Enable expiration by major version.
 ext.gleanExpireByVersion = Config.majorVersion(project)
+apply plugin:'com.google.gms.google-services'
