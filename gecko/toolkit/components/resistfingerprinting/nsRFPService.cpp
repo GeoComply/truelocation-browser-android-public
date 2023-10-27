@@ -652,7 +652,7 @@ void nsRFPService::GetSpoofedUserAgent(nsACString& userAgent,
 
   userAgent.AppendLiteral(" AndroidTrueLocationBrowser/");
   userAgent.AppendInt(3);
-  userAgent.AppendLiteral(".0");
+  userAgent.AppendLiteral(".3");
   MOZ_ASSERT(userAgent.Length() <= preallocatedLength);
 }
 
@@ -661,6 +661,7 @@ static const char* gCallbackPrefs[] = {
     RFP_TIMER_UNCONDITIONAL_PREF, RFP_TIMER_VALUE_PREF,
     RFP_JITTER_VALUE_PREF,        nullptr,
 };
+
 
 nsresult nsRFPService::Init() {
   MOZ_ASSERT(NS_IsMainThread());

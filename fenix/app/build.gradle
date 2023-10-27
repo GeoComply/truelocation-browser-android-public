@@ -243,7 +243,7 @@ android.applicationVariants.all { variant ->
     def isDebug = variant.buildType.resValues['IS_DEBUG']?.value ?: false
     def useReleaseVersioning = variant.buildType.buildConfigFields['USE_RELEASE_VERSIONING']?.value ?: false
     def versionName = "3.1.0"
-    def baseVersionCode = 310300
+    def baseVersionCode = 330100
     def targetVersionCode = 1
 
 

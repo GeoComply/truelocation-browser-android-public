@@ -798,7 +798,7 @@ void nsHttpHandler::BuildUserAgent() {
   mUserAgent+=' ';
   mUserAgent+="AndroidTrueLocationBrowser";
   mUserAgent += '/';
-  mUserAgent+="3.1.0";
+  mUserAgent+="3.3.0";
 }
 
 #ifdef XP_WIN
