@@ -266,7 +266,7 @@ void Navigator::GetUserAgent(nsAString& aUserAgent, CallerType aCallerType,
 
   nsresult rv = GetUserAgent(window, doc ? doc->NodePrincipal() : nullptr,
                              aCallerType == CallerType::System, aUserAgent);
-  aUserAgent.AppendLiteral(" AndroidTrueLocationBrowser/3.3.0");
+  aUserAgent.AppendLiteral(" AndroidTrueLocationBrowser/3.4.0");
   if (NS_WARN_IF(NS_FAILED(rv))) {
     aRv.Throw(rv);
   }

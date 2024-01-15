@@ -652,7 +652,7 @@ void nsRFPService::GetSpoofedUserAgent(nsACString& userAgent,
 
   userAgent.AppendLiteral(" AndroidTrueLocationBrowser/");
   userAgent.AppendInt(3);
-  userAgent.AppendLiteral(".3");
+  userAgent.AppendLiteral(".4");
   MOZ_ASSERT(userAgent.Length() <= preallocatedLength);
 }
 
