@@ -82,15 +82,6 @@ android {
         }
     }
 
-    signingConfigs {
-        release {
-            storeFile file("${oobee_keystore}")
-            storePassword "${oobee_keystore_password}"
-            keyAlias "${oobee_key_alias}"
-            keyPassword "${oobee_key_password}"
-        }
-    }
-
     def releaseTemplate = {
         // We allow disabling optimization by passing `-PdisableOptimization` to gradle. This is used
         // in automation for UI testing non-debug builds.
