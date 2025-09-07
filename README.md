@@ -1,5 +1,10 @@
 # truelocation-browser-android
 
+**Important Notice**
+
+This repository is provided for illustrative and reference purposes only. It provides Firefox browser source code with modifications to support build of TrueLocation Browser application. **Do not use this code in production or attempt to compile the application** as it does not contain the proprietary source code required to build the TrueLocation Browser.
+No guarantees, warranties or support are provided for the code in this repository. For security submissions, only the latest version of the TrueLocation Browser application available on Google Play is eligible for review. Please do not submit security reports for this repository or any unofficial builds. To submit security reports for TrueLocation Browser, please follow guidance from https://www.geocomply.com/trust-center/security/
+
 ## Config gecko
 
 ```
@@ -32,17 +37,6 @@ Open local.properties and add this lines
 ```
 dependencySubstitutions.geckoviewTopsrcdir=/path/to/gecko
 autoPublish.android-components.dir=/path/to/android-components
-```
-
-#### Before run build release, you should setup Global Properties
-
-Create or open file gradle.properties in folder ~/.gradle. Add this line:
-
-```
-oobee_keystore_password=your_keystore_pass
-oobee_key_alias=your_keystore_alias
-oobee_key_password=your_keystore_pass
-oobee_keystore=/path/to/your/keystore
 ```
 
 

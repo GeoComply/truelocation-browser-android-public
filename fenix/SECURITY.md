@@ -1,5 +1,7 @@
 # Security Policy
 
-## Reporting a Vulnerability
+**Reporting a Vulnerability**
+Your efforts to responsibly disclose your findings are appreciated and will be acknowledged. If you believe you have found a security vulnerability in TrueLocation Browser, we encourage you to report it to us privately.
 
-Report all security vunerablites to [Bugzilla Fenix::Security](https://bugzilla.mozilla.org/enter_bug.cgi?product=Fenix&component=Security). If they are not a security bug you will be asked to move your report to [Fenix GitHub](https://github.com/mozilla-mobile/fenix/issues). See the [Mozilla Security Bug Bounty Program](https://www.mozilla.org/en-US/security/bug-bounty/) and the [client security reporting](https://www.mozilla.org/en-US/security/client-bug-bounty/) pages for details. In any case where this document and the Mozilla.org pages differ the Mozilla.org pages are the official documentation.
+Please do not report security vulnerabilities through public GitHub issues. 
+To submit security reports for TrueLocation Browser application, please follow guidance from https://www.geocomply.com/trust-center/security/
